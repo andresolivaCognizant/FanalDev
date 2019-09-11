@@ -17,8 +17,13 @@ public class AR_opp_chk_tst {
     
 	static testMethod void myUnitTest()
 	{
+        AO_diasActividadesCotizacion__c  objTest = new AO_diasActividadesCotizacion__c ();
+        objTest.dias__C = 2;
+        objTest.NAME = 'TEST';
+        INSERT objTest;
         //Init test
         Test.StartTest();
+        
         RecordType recTyp = [Select Id, Name From RecordType Where SobjectType = 'AM_Oportunidad__c' 
                              and Name = 'Cotizacion P.Natural Renting' Limit 1];
        

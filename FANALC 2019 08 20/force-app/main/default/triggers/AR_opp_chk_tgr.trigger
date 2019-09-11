@@ -8,7 +8,8 @@
 *           No.     Date            Author                  Description
 *           -----   ----------      --------------------    ---------------
 * @version  1.0     13/06/2019      Alejandro Rebollo (AR)  Class definition.
-*********************************************************************************************************/
+* @version  1.1     06/08/2019      Andrés Oliva(AO)        indlude createTask and updateCategiaNegocio methods 
+ *********************************************************************************************************/
 
 trigger AR_opp_chk_tgr on AM_Oportunidad__c (before insert ,after insert,after update ) {
 // Local variable declarations
