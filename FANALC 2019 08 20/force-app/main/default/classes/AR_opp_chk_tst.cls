@@ -59,7 +59,7 @@ public class AR_opp_chk_tst {
         objOpp.AM_Usuario_motocicleta__c = objAcc.Id;
         objOpp.AM_Propietario_motocicleta__c  = objAcc.Id;
         objOpp.RecordTypeId = recTyp.Id;
-        objOpp.AM_Fecha_de_cierre__c = system.today();
+        objOpp.AM_Fecha_de_cierre__c = system.today().addDays( 2 );
         objOpp.AM_Modelo_de_interes__c = objPrd.Id;
         objOpp.AM_Color__c = 'AZUL SPORT';
         objOpp.AM_Valor_cuota_inicial__c = 100000;
