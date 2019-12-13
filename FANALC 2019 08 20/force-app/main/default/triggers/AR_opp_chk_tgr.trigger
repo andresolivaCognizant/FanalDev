@@ -1,3 +1,32 @@
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
 /**
 * Fanalca
 * @author           Alejandro Rebollo
@@ -8,7 +37,7 @@
 *           No.     Date            Author                  Description
 *           -----   ----------      --------------------    ---------------
 * @version  1.0     13/06/2019      Alejandro Rebollo (AR)  Class definition.
-* @version  1.1     06/08/2019      Andrés Oliva(AO)        indlude createTask and updateCategiaNegocio methods 
+* @version  1.1     06/08/2019      Andrés Oliva(AO)        indlude createTask and updateCategiaNegocio methods
  *********************************************************************************************************/
 
 trigger AR_opp_chk_tgr on AM_Oportunidad__c (before insert ,after insert,after update ) {
@@ -21,11 +50,11 @@ trigger AR_opp_chk_tgr on AM_Oportunidad__c (before insert ,after insert,after u
     /* start 06 AGOSTO 2019 AO Se agrega llamado al método que crea actividades de seguimiento*/
     if(trigger.isAfter && trigger.IsInsert )
     {
-        cotizaciontriggerHandlerAfterInsert.createTask( trigger.New );
+       // cotizaciontriggerHandlerAfterInsert.createTask( trigger.New );
     }
     if(trigger.isAfter && trigger.isupdate)
     {
-        cotizaciontriggerHandlerAfterInsert.updateCategiaNegocio( trigger.New );
+      //  cotizaciontriggerHandlerAfterInsert.updateCategiaNegocio( trigger.New );
         
     }
     /* start 06 AGOSTO 2019 AO*/

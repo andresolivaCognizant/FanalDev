@@ -27,9 +27,9 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 .backgroundGR  { background-color: #dddddd;  padding: 8px;width:350px;  border-right: 1px solid #708090;}
 .backgroundW 	{ background-color: #FFFFFF;  padding: 8px;width:300px;}
 .backgroundWServiIncluid  {margin-left: -7px ;background-color: #FFFFFF;  padding: 8px;width:330px;}
-.anchoFijo  { font: bold 12px;font-family: sans-serif; line-height: 0px; width:300px ; padding-right: 1px;  background-color: #dddddd; height:10px;}
+.anchoFijo  { font: bold 12px;font-family: sans-serif; line-height: 0px; width:300px ; padding-right: 1px;  background-color: #dddddd; height:4px;}
 .anchoFijoServicio  { font: bold 12px;font-family: sans-serif; line-height: 1px; width:360px ; background-color: #dddddd;}
-.anchoFijoCuerpo  { font-family: sans-serif; line-height: 1px; width:250px ; }
+.anchoFijoCuerpo  { font-family: sans-serif; line-height: 1px; width:250px ; height:10px; }
 .backgroundWT  { background-color: #FFFFFF;  padding: 1px;width:540px; margin-left: 5px  ; }
 .backgroundLogoGatan { background-color: #FFFFFF;  padding: 1px ; margin-left: -10px  ; }
 .backgroundCOnteniDGatan { background-color: #FFFFFF;  padding: 1px ; margin-left: 5px  ; width:540px }
@@ -46,11 +46,11 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 .ft2{font: 1px;line-height: 1px;}
 .ft3{font: 16px;color: #414042;line-height: 18px;}
 .ft4{font: bold 14px;font-family: sans-serif;color: #414042;line-height: 16px;}
-.ft5{font: 15px;color: #414042;line-height: 24px;}
+.ft5{font: 14px;color: #414042;line-height: 22px;}
 .ft6{font: 6px;color: #58595b;line-height: 15px;}
 .ft7{font: bold 13px;font-family: sans-serif;color: 923F2E;line-height: 16px; padding: 15px}
 .ftR{font: bold 12px;font-family: sans-serif;color: 923F2E;line-height: 1px; width:380px ; background-color: #dddddd;}
-.ft8{font: bold 10px;font-family: sans-serif;color: #414042;line-height: 4px; }
+.ft8{font: bold 10px;font-family: sans-serif;color: #414042;line-height: 2px; }
 .ft88{font: bold 12px;font-family: sans-serif;color: #414042}
 .ft9{font: 10px;color: #414042;line-height: 4px;}
 .ft99{font: 7px;color: #414042;line-height: 14px;}
@@ -91,7 +91,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 .pOServicios{  margin-top: -25px; margin-left: 1px;  width: 340px;} 
 .p3{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;margin-top: 8px;margin-bottom: 0px;}
 .p4{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;margin-top: 3px;margin-bottom: 0px;}
-.p5{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;padding-right: 20px;margin-top: 0px;margin-bottom: 2px;}
+.p5{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;padding-bottom:4px;padding-right: 20px;margin-top: 0px;margin-bottom: 2px;}
 .p6{text-align: left;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p7{text-align: left;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p8{text-align: left;padding-left: 67px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
@@ -163,7 +163,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 .tr5{height: 19px;}
 .tr6{height: 15px;}
 .tr7{height: 18px;}
-.tr8{height: 19px;}
+.tr8{height: 15px;}
 .tr9{height: 17px;}
 .tr10{height: 14px;}
 .tr11{height: 20px;}

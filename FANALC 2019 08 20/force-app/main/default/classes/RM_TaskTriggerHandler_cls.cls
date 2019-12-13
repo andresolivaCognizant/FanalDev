@@ -1,32 +1,33 @@
 /**
 * Fanalca
-* @author 			Raul Mora
-* Description:		Task trigger handler class.
+* @author           Raul Mora
+* Description:      Task trigger handler class.
 *
 * Changes (Version)
 * -------------------------------------
-*			No.		Date			Author					Description
-*			-----	----------		--------------------	---------------
-* @version	1.0		03/12/2018		Raul Mora (RM)			Class definition.
+*           No.     Date            Author                  Description
+*           -----   ----------      --------------------    ---------------
+* @version  1.0     03/12/2018      Raul Mora (RM)          Class definition.
+* @version  1.1     13/12/2019      Andrés Oliva (AO)       Include method updateAccountRelation
 *********************************************************************************************************/
 public class RM_TaskTriggerHandler_cls {
     /**
-	* @Method: 		taskBeforeInsert
-	* @param: 		List Task
-	* @Description: Refactor Task Trigger.
-	* @author 		Raul Mora - 03122018
-	*/
+    * @Method:      taskBeforeInsert
+    * @param:       List Task
+    * @Description: Refactor Task Trigger.
+    * @author       Raul Mora - 03122018
+    */
     public static void taskBeforeInsert( List<Task> lstTask ){
         updateTask( lstTask );
         checkCreatedTasks( lstTask );
     }
     
     /**
-	* @Method: 		updateTask
-	* @param: 		List Task
-	* @Description: Refactor Task Trigger.
-	* @author 		Raul Mora - 03122018
-	*/
+    * @Method:      updateTask
+    * @param:       List Task
+    * @Description: Refactor Task Trigger.
+    * @author       Raul Mora - 03122018
+    */
     public static void updateTask( List<Task> lstTask ) {
         if( lstTask.get(0).WhatId != null ) {
             //03/12/2018 RM. Obtain first record of the list to verify which object it is related to.
@@ -78,15 +79,15 @@ public class RM_TaskTriggerHandler_cls {
                     taskId.AM_Telefono_Light__c = objAcc.get(taskId.WhatId).Phone;
                 }
             }
-        }        	
+        }           
     }
     
     /**
-	* @Method: 		checkCreatedTasks
-	* @param: 		List Task
-	* @Description: Method to verify if there is another open task related to the user.
-	* @author 		Raul Mora - 02/25/2019
-	*/
+    * @Method:      checkCreatedTasks
+    * @param:       List Task
+    * @Description: Method to verify if there is another open task related to the user.
+    * @author       Raul Mora - 02/25/2019
+    */
     public static void checkCreatedTasks( List<Task> lstTask ) {
         map<String,List<Task>> mpTask = new map<String,List<Task>>();
         map<String,List<Task>> mpTaskOwnOld = new map<String,List<Task>>();
@@ -117,9 +118,48 @@ public class RM_TaskTriggerHandler_cls {
                             objTaskTgr.addError( 'Tiene una tarea programada, por favor revisela: <a href=\'/' + objTa.id + '\'>Tarea ' + objTa.Subject + '</a>', false);
                         }
                     }                    
-                }            	
-        	}
+                }               
+            }
         }
     }
 
+    /**
+    * @Method:      updateAccountRelation
+    * @param:       list< task > lstNewTask, map<id,task> mapOldTask
+    * @Description: Update field "AM_Busqueda_Cuenta__c"
+    * @author       Andrés Oliva - 0820109
+    */
+    public static void updateAccountRelation( list< task > lstNewTask,  map< id,task > mapOldTask )
+    {
+        String sobjectTypeWhatId        = '';
+        String sobjectTypeWhoId         = '';
+        set< id>setContact      =   new set< id >();
+        map< id,id >mapContactAccount   =   new map< id,id >();
+        for( task varTask: lstNewTask ){            
+            if( varTask.WhatId != null && ( mapOldTask == null || mapOldTask.get( varTask.Id ).WhatId != varTask.WhatId )){
+                sobjectTypeWhatId   =   varTask.WhatId.getSObjectType().getDescribe().getName();
+                if( sobjectTypeWhatId.equalsIgnoreCase('Account')){
+                    varTask.AM_Busqueda_cuenta__c   = varTask.WhatId;
+                }
+            }
+            if( varTask.WhoId != null &&  ( mapOldTask == null || mapOldTask.get( varTask.Id ).WhoId != varTask.WhoId ) ){
+                sobjectTypeWhoId    =    varTask.WhoId.getSObjectType().getDescribe().getName();
+                if( sobjectTypeWhoId.equalsIgnoreCase('Contact') ){
+                    setContact.add( varTask.WhoId );
+                }
+            }
+        }
+        for( Account varAcc: [ SELECT Id,PersonContactId FROM Account WHERE PersonContactId IN:setContact ]){
+            if( varAcc.PersonContactId != null ){
+                mapContactAccount.put( varAcc.PersonContactId, varAcc.Id );
+            }            
+        }
+        system.debug('\n map account contact @@@ ' + mapContactAccount + '\n set contact @@@ ' + setContact );
+        for(  task varTask: lstNewTask ){
+            system.debug('\n var task @@@ ' + varTask );
+            if( mapContactAccount.containsKey( varTask.WhoId ) ){
+                varTask.AM_Busqueda_cuenta__c   =    mapContactAccount.get( varTask.WhoId );
+            }
+        }        
+    }
 }

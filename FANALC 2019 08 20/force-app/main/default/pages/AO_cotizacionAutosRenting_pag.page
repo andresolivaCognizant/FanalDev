@@ -62,19 +62,18 @@
                             <p class="p2 ft3">{!objOp.Name}</p>
                         </td>                        
                     </tr>
-                </table>
-                
-                
+                </table>                
                 <P class="p3 ft4 p2Left">Estimado (a):</P>
                 <P class="p4 ft5 p2Left">{!objOp.AM_Usuario_motocicleta__r.Name}</P>
                 <P class="p5 ft9 p2Left">{!$Label.RM_AgradecimientoCotizacionLBL}</P>                
+               
                 <table cellpadding="0" cellspacing="0" class="t1" >                    
-                     <tr class="anchoFijo">
-                        <td colspan="2" >
-                            <p>  Datos del cliente</p>
+                     <tr>
+                        <td colspan="2"  class="anchoFijo"  >
+                            <p> Datos del cliente</p>
                         </td>
-                        <td colspan="2" >
-                            <p> Información ejecutivo Renting Total</p>
+                        <td colspan="2"  class="anchoFijo"   >
+                            <p>Información ejecutivo Renting Total</p>
                         </td>
                     </tr>
                 </table>
@@ -173,17 +172,17 @@
                                     <TD class="tr8 td4"><P class="p0 ft8">Color opc#2:<SPAN class="ft9">{!objOp.AM_Color_opcion_2__c}</SPAN></P></TD>                                  
                                 </tr>
                                 <tr>
-                                    <TD class="tr7 td4"><P class="p0 ft8">Versión: <SPAN class="ft9">{!objOp.AM_Modelo_de_interes__r.AM_Version__c}</SPAN></P></TD>                                  
+                                    <TD class="tr8 td4"><P class="p0 ft8">Versión: <SPAN class="ft9">{!objOp.AM_Modelo_de_interes__r.AM_Version__c}</SPAN></P></TD>                                  
                                 </tr>
                                 <tr>
-                                    <TD class="tr7 td4"><P class="p0 ft8">C.C: <SPAN class="ft9">{!objOp.AM_Modelo_de_interes__r.AM_Cilindraje__c}</SPAN></P></TD>                                  
+                                    <TD class="tr8 td4"><P class="p0 ft8">C.C: <SPAN class="ft9">{!objOp.AM_Modelo_de_interes__r.AM_Cilindraje__c}</SPAN></P></TD>                                  
                                 </tr>
                                 <tr>
                                     <TD class="tr8 td4"><P class="p0 ft8">Caja: <SPAN class="ft9">{!objOp.AM_Modelo_de_interes__r.AM_Transmision__c}</SPAN></P></TD>                                 
                                 </tr>
                                 
                                 <tr>
-                                    <TD class="tr9 td4"><P class="p0 ft8">Precio de Vehículo (IVA incluido)</P></TD>                                   
+                                    <TD class="tr8 td4"><P class="p0 ft8">Precio de Vehículo (IVA incluido)</P></TD>                                   
                                 </tr>                                
                                 <tr>
                                     <td class="tr12 td4">
@@ -202,10 +201,10 @@
                         <td width="55%">                           
                            <table class="tableRenting" align="Right" border="0" cellspacing="0" cellpadding="0" width="300px" >  
                             <tr>
-                                    <TD class="tr7 td4 p1Left"><P class="p1Left ft8">Tipo de Renting: <SPAN class="ft9">{!objOp.AM_Tipo_Renting__c}</SPAN></P></TD>                                   
+                                    <TD class="tr8 td4 p1Left"><P class="p1Left ft8">Tipo de Renting: <SPAN class="ft9">{!objOp.AM_Tipo_Renting__c}</SPAN></P></TD>                                   
                             </tr>
                             <tr>
-                                    <TD class="tr7 td4 p1Left"><P class="p1Left ft8">Cantidad de vehículos: <SPAN class="ft9">{!objOp.AM_Cantidad_de_vehiculos__c}</SPAN></P></TD>                                  
+                                    <TD class="tr8 td4 p1Left"><P class="p1Left ft8">Cantidad de vehículos: <SPAN class="ft9">{!objOp.AM_Cantidad_de_vehiculos__c}</SPAN></P></TD>                                  
                                 </tr>
                             <tr>
                                 <TD class="tr8 td4 p1Left"><P class="p1Left ft8">Condiciones: <!--<SPAN class="ft9">{!objOp.AM_Modelo_de_interes__r.AM_Transmision__c}</SPAN>--></P></TD>                                 
