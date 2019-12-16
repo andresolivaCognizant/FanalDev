@@ -1,31 +1,5 @@
 <apex:page renderAs="PDF" standardController="AM_Oportunidad__c" extensions="RM_CotizacionFinanciacion_ctr" applyHtmlTag="false" applyBodyTag="false" showHeader="false" standardStylesheets="false">
-    <apex:stylesheet value="{!$Resource.AO_sr_cotizacionRentingPDFStyleSheet}" />
-    <div class="slds-grid slds-wrap">
-        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
-        <span></span>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
-        <div class="custom-black-letter">Estimado:</div>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
-        <div class="custom-letter">Saul Ojeda Mosquera</div>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
-        <span></span>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
-        <span></span>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
-        <div class="custom-black-letter">Estimado:</div>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
-        <div class="custom-letter">Saul Ojeda Mosquera</div>
-        </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
-        <span></span>
-        </div>
-    </div>
+    <apex:stylesheet value="{!$Resource.AO_sr_cotizacionRentingPDFStyleSheet}" />   
     <html>        
         <body>
             <div id="page_1">    
@@ -283,7 +257,31 @@
                            </td>
                        </tr>
                    </table>
-                </div>               
+                </div> 
+            
+            <table class="t1">
+                <tr>
+                    <th rowspan="6" colspan ="3" width="50%" align="right" ><P class="p14 ft16" align="right">La existencia o ausencia de los sistemas de seguridad se señalan incluyendo una “ X” en caso de ausencia o un “  ” en caso de existencia. En el caso del sistema de bolsas de aire se indica adicional el número de bolsas que posee.</p></th>    
+                </tr>
+                <tr>
+                    <td valign="center" align="center"><apex:image  id="imgCheckSistemaAntibloqueo"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>
+                    <td valign="center" align="center"><apex:image  id="imgCheckControlEstabilidad"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>
+                    <td valign="center" align="center"><apex:image id="imgCheckFrenadoColisionFrontal"    value="{!$Resource.AO_sr_checkX}" width="15" /></td>
+                    <td valign="center" align="center"><apex:image id="imgCheckFrenadoAutonomo"           value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                    <td valign="center" align="center"><apex:image id="imgCheckSujecionInfantil"          value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                    <td valign="center" align="center"><apex:image id="imgCheckBolsaAire"                 value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                </tr>
+                <tr>
+                    <td><apex:image id="imgSistemaAntibloqueo"          value="{!$Resource.AO_sr_SistemaAntibloqueo}" width="60" /></td>
+                    <td><apex:image id="imgControlEstabilidad"          value="{!$Resource.AO_sr_controlElectronicoEstabilidad}" width="60" /></td>
+                    <td><apex:image id="imgFrenadoColisionFrontal"      value="{!$Resource.AO_sr_AlertaColisionFrontal}" width="60" /></td>
+                    <td><apex:image id="imgFrenadoAutonomo"             value="{!$Resource.AO_sr_FrenadoAutonomo}" width="60" /></td>
+                    <td><apex:image id="imgSujecionInfantil"            value="{!$Resource.AO_sr_sistemaSujecionInfantil}" width="60" /> </td>
+                    <td><apex:image id="imgBolsaAire"                   value="{!$Resource.AO_sr_sistemaBolsaAire}" width="60" /> </td> 
+                    <td><apex:image id="imgCheck2BolsaAire"             value="{!$Resource.AO_sr_check}"  width="15" /> </td>                   
+                </tr>               
+            </table>
+                               
             <table cellpadding="0" cellspacing="0" class="t1">
               <tr>              
 
