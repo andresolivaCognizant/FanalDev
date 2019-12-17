@@ -261,7 +261,7 @@
             
             <table class="t1">
                 <tr>
-                    <th rowspan="6" colspan ="3" width="50%" align="right" ><P class="p14 ft16" align="right">La existencia o ausencia de los sistemas de seguridad se señalan incluyendo una “ X” en caso de ausencia o un “  ” en caso de existencia. En el caso del sistema de bolsas de aire se indica adicional el número de bolsas que posee.</p></th>    
+                    <th rowspan="6" colspan ="3" width="50%" align="right" ><P class="p14 ft16" align="right">{!$Label.AO_sr_sistemaSeguridad_lbl}</p></th>    
                 </tr>
                 <tr>
                     <td valign="center" align="center"><apex:image  id="imgCheckSistemaAntibloqueo"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>

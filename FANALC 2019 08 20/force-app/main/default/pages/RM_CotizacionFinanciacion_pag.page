@@ -271,20 +271,50 @@
                             </apex:outputPanel>    
                         </td>
                     </tr>                       
-               </table>
-               <table cellpadding="0" cellspacing="0" class="t11">
-                   <tr>
-                       <td>
-                           <apex:image id="imgLogoGaran" value="{!$Resource.RM_LogoGarantiaNuevos}"/>
-                       </td>
-                       <td class="td61">
-                            <p class="p0 ft2">&nbsp;</p>
-                        </td>
-                       <td>
-                            <P class="p14 ft16">{!$Label.RM_GarantiaHondaLBL}</P>
-                       </td>
-                   </tr>
-               </table>
+               </table>               
+                <div class="tableRenting">
+                   <table cellpadding="0" cellspacing="0" class="t11">
+                       <tr>
+                           <td>
+                                <div class="backgroundLogoGatan">
+                                    <apex:image id="imgLogoGaran"  value="{!$Resource.AO_LogoGarantiaNuevos}" width="145" height="60"/>
+                                </div>
+                           </td> 
+                           <td class="td61">
+                                <p class="p0 ft2">&nbsp;</p>
+                            </td>                          
+                           <td>
+                                <div class="backgroundCOnteniDGatan">
+                                    <P class="p14 ft16">{!$Label.RM_GarantiaHondaLBL}</P>
+                                </div>
+                           </td>
+                       </tr>
+                   </table>
+                </div> 
+            
+                <table class="t1">
+                    <tr>
+                        <th rowspan="6" colspan ="3" width="50%" align="right" ><P class="p14 ft16" align="right">{!$Label.AO_sr_sistemaSeguridad_lbl}</p></th>    
+                    </tr>
+                    <tr>
+                        <td valign="center" align="center"><apex:image  id="imgCheckSistemaAntibloqueo"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>
+                        <td valign="center" align="center"><apex:image  id="imgCheckControlEstabilidad"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>
+                        <td valign="center" align="center"><apex:image id="imgCheckFrenadoColisionFrontal"    value="{!$Resource.AO_sr_checkX}" width="15" /></td>
+                        <td valign="center" align="center"><apex:image id="imgCheckFrenadoAutonomo"           value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                        <td valign="center" align="center"><apex:image id="imgCheckSujecionInfantil"          value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                        <td valign="center" align="center"><apex:image id="imgCheckBolsaAire"                 value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                    </tr>
+                    <tr>
+                        <td><apex:image id="imgSistemaAntibloqueo"          value="{!$Resource.AO_sr_SistemaAntibloqueo}" width="60" /></td>
+                        <td><apex:image id="imgControlEstabilidad"          value="{!$Resource.AO_sr_controlElectronicoEstabilidad}" width="60" /></td>
+                        <td><apex:image id="imgFrenadoColisionFrontal"      value="{!$Resource.AO_sr_AlertaColisionFrontal}" width="60" /></td>
+                        <td><apex:image id="imgFrenadoAutonomo"             value="{!$Resource.AO_sr_FrenadoAutonomo}" width="60" /></td>
+                        <td><apex:image id="imgSujecionInfantil"            value="{!$Resource.AO_sr_sistemaSujecionInfantil}" width="60" /> </td>
+                        <td><apex:image id="imgBolsaAire"                   value="{!$Resource.AO_sr_sistemaBolsaAire}" width="60" /> </td> 
+                        <td><apex:image id="imgCheck2BolsaAire"             value="{!$Resource.AO_sr_check}"  width="15" /> </td>                   
+                    </tr>               
+                </table>
+                    
                 <apex:outputPanel rendered="{!AND(objOp.AM_Financiera_Simulacion1__c != null)}">
                <table cellpadding="0" cellspacing="0" class="t1">
                     <tr>
@@ -487,34 +517,33 @@
                 </table>
                 <table cellpadding="0" cellspacing="0" class="t1">
                     <tr>
-                        <td width="85%">
-                            <p class="p14 ft166">{!$Label.RM_AutorizaDatosLBL}</p>
-                            <p class="p14 ft166">{!$Label.RM_AutorizaDatos2LBL}</p>
+                        <td width="100%">                            
+                                <p class="p14 ft166">{!$Label.RM_AutorizaDatosLBL}{!$Label.RM_AutorizaDatos2LBL}</p>                                                        
                         </td>
-                        <td width="5%" >
+                        <td width="2%" >
                             &nbsp;
                         </td>
-                        <td width="10%">
-                            <apex:image id="imgYesNoCheckBox" value="{!$Resource.RM_SiNoCheckBox}"/>
+                        <td width="7%">                            
+                            <apex:image   id="imgYesNoCheckBox" value="{!$Resource.RM_SiNoCheckBox}"/>
                             <p class="p14 ft166">&nbsp;</p>
                             <p class="p14 ft166">&nbsp;</p>
-                            <apex:image id="imgClientSignature" value="{!$Resource.RM_FirmaCliente}"/>
+                            <apex:image id="imgClientSignature" value="{!$Resource.RM_FirmaCliente}"/>                            
                         </td>
                     </tr>
                 </table>
                 <table cellpadding="0" cellspacing="0" class="t1">
                     <tr>
-                        <td width="25%" valign="center" align="center">
-                            <apex:image id="imgEcoImage" value="{!$Resource.RM_LogoEcoDreams}"/>
+                        <td width="22%" valign="center" align="center">
+                            <apex:image width="80%" id="imgEcoImage" value="{!$Resource.RM_LogoEcoDreams}"/>
                         </td>
-                        <td width="25%" valign="center" align="center">
-                            <apex:image id="imgHondaURL" value="{!$Resource.RM_LogoHondaURL}"/>
+                        <td width="22%" valign="center" align="center">
+                            <apex:image width="80%" id="imgHondaURL" value="{!$Resource.RM_LogoHondaURL}"/>
                         </td>
-                        <td width="25%" valign="center" align="center">
-                            <apex:image id="imgHondaUsed" value="{!$Resource.RM_LogoUsados}"/>
+                        <td width="22%" valign="center" align="center">
+                            <apex:image width="80%" id="imgHondaUsed" value="{!$Resource.RM_LogoUsados}"/>
                         </td>
-                        <td width="25%" valign="center" align="center">
-                            <apex:image id="imgHondaRenting" value="{!$Resource.RM_LogoHondaRenting}"/>
+                        <td width="22%" valign="center" align="center">
+                            <apex:image width="80%" id="imgHondaRenting" value="{!$Resource.RM_LogoHondaRenting}"/>
                         </td>
                     </tr>
                 </table>
@@ -524,3 +553,4 @@
         </body>
     </html>
 </apex:page>
+              
