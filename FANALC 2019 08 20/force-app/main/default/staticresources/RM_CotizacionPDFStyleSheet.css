@@ -15,7 +15,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS;}
 #p1dimg2 {position:absolute;top:0px;left:0px;z-index:-1;width:778px;height:1056px;}
 #p1dimg3 {position:absolute;top:580px;left:5px;z-index:-1;width:200px;height:100px;}
 #rcorners {border: 2px solid #73AD21;border-radius: 25px;}
-
+.anchoFijo  { font: bold 12px;font-family: sans-serif; line-height: 0px; width:300px ; padding-right: 1px;  background-color: #dddddd; height:4px;}
 .square {
 	width: 15px;
 	height: 15px;
