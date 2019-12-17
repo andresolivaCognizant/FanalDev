@@ -20,6 +20,12 @@ public class RM_CotizacionFinanciacion_ctr {
     public String strNameStyle {get;set;}
     public String strAddressStyle {get;set;}
     public String strServiciosIncluidos {get;set;}
+    public Boolean blnSistemaAntibloqueoFrenos {get; set;}
+    public Boolean blnControlElectronicoEstabilidad {get; set;}
+    public Boolean blnAlertaColisionFrontal {get; set;}
+    public Boolean blnFrenadoAutonomoEmergencia {get; set;}
+    public Boolean blnSistemaSujecionInfantil {get; set;}
+    public Boolean blnSistemaBolsaAire {get; set;}
     
     public RM_CotizacionFinanciacion_ctr( ApexPages.StandardController stdController ) {
         this.objOp = [ Select Id, AM_Fecha_de_creacion__c, Name, AM_Usuario_motocicleta__r.Name, AM_Usuario_motocicleta__r.AM_Numero_de_documento__c,
@@ -27,6 +33,9 @@ public class RM_CotizacionFinanciacion_ctr {
                        AM_Usuario_motocicleta__r.AM_Direccion__c, AM_Agencia_propietario__c, AM_Direccion_propietario__c, AM_Usuario_motocicleta__r.PersonEmail,
                        AM_Canal_de_atencion__c, AM_Modelo_sugerido_1__c, AM_Modelo_de_interes__r.Name, AM_Modelo_de_interes__r.AM_URL_foto__c, 
                        AM_Modelo_de_interes__r.AM_Linea__c, AM_Color__c, AM_Modelo_de_interes__r.AM_Version__c, AM_Modelo_de_interes__r.AM_Cilindraje__c,
+                       AM_Modelo_de_interes__r.SO_Sistema_antibloqueo_de_frenos__c, AM_Modelo_de_interes__r.SO_Control_electronico_de_estabilidad__c,
+                       AM_Modelo_de_interes__r.SO_Alerta_de_colision_frontal__c, AM_Modelo_de_interes__r.SO_Frenado_autonomo_de_emergencia__c,
+                       AM_Modelo_de_interes__r.SO_Sistema_de_sujecion_infantil__c, AM_Modelo_de_interes__r.SO_Sistema_de_bolsa_de_aire__c,
                        AM_Modelo_de_interes__r.AM_Transmision__c, AM_Modelo_de_interes__r.AM_Precio_de_lista__c, AM_Modelo_sugerido_1__r.Name, 
                        AM_Modelo_sugerido_1__r.AM_URL_foto__c, AM_Modelo_sugerido_1__r.AM_Linea__c, Color_sugerido__c, AM_Modelo_sugerido_1__r.AM_Version__c,
                        AM_Modelo_sugerido_1__r.AM_Cilindraje__c, AM_Modelo_sugerido_1__r.AM_Transmision__c, AM_Modelo_sugerido_1__r.AM_Precio_de_lista__c,
@@ -46,6 +55,14 @@ public class RM_CotizacionFinanciacion_ctr {
                        ,AM_Porcentaje_IVA__c,AM_IVA_Canon_Renting1__c,AM_IVA_Canon_Renting2__c,AM_IVA_Canon_Renting3__c
                        From AM_Oportunidad__c
                        Where Id =: apexpages.currentpage().getparameters().get('id') ];
+        if( this.objOp.AM_Modelo_de_interes__r != null ){
+            blnSistemaAntibloqueoFrenos         =   this.objOp.AM_Modelo_de_interes__r.SO_Sistema_antibloqueo_de_frenos__c ;
+            blnControlElectronicoEstabilidad    =   this.objOp.AM_Modelo_de_interes__r.SO_Control_electronico_de_estabilidad__c;
+            blnAlertaColisionFrontal            =   this.objOp.AM_Modelo_de_interes__r.SO_Alerta_de_colision_frontal__c;
+            blnFrenadoAutonomoEmergencia        =   this.objOp.AM_Modelo_de_interes__r.SO_Frenado_autonomo_de_emergencia__c;
+            blnSistemaSujecionInfantil          =   this.objOp.AM_Modelo_de_interes__r.SO_Sistema_de_sujecion_infantil__c;
+            blnSistemaBolsaAire                 =   this.objOp.AM_Modelo_de_interes__r.SO_Sistema_de_bolsa_de_aire__c ;
+        }
         
         String strObservacionesFirstW = this.objOp.AM_ObservacionesL__c != null ? this.objOp.AM_ObservacionesL__c.substringBefore(' ') : '';
         String strObservaciones = strObservacionesFirstW.isAllUpperCase() ? this.objOp.AM_ObservacionesL__c.toLowerCase().capitalize() : this.objOp.AM_ObservacionesL__c;
