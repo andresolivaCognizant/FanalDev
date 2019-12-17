@@ -26,6 +26,7 @@ public class RM_CotizacionFinanciacion_ctr {
     public Boolean blnFrenadoAutonomoEmergencia {get; set;}
     public Boolean blnSistemaSujecionInfantil {get; set;}
     public Boolean blnSistemaBolsaAire {get; set;}
+    public Integer intBolsasAire {get; set;}
     
     public RM_CotizacionFinanciacion_ctr( ApexPages.StandardController stdController ) {
         this.objOp = [ Select Id, AM_Fecha_de_creacion__c, Name, AM_Usuario_motocicleta__r.Name, AM_Usuario_motocicleta__r.AM_Numero_de_documento__c,
@@ -36,6 +37,7 @@ public class RM_CotizacionFinanciacion_ctr {
                        AM_Modelo_de_interes__r.SO_Sistema_antibloqueo_de_frenos__c, AM_Modelo_de_interes__r.SO_Control_electronico_de_estabilidad__c,
                        AM_Modelo_de_interes__r.SO_Alerta_de_colision_frontal__c, AM_Modelo_de_interes__r.SO_Frenado_autonomo_de_emergencia__c,
                        AM_Modelo_de_interes__r.SO_Sistema_de_sujecion_infantil__c, AM_Modelo_de_interes__r.SO_Sistema_de_bolsa_de_aire__c,
+                       AM_Modelo_de_interes__r.SO_Numero_de_bolsas_de_aire__c,
                        AM_Modelo_de_interes__r.AM_Transmision__c, AM_Modelo_de_interes__r.AM_Precio_de_lista__c, AM_Modelo_sugerido_1__r.Name, 
                        AM_Modelo_sugerido_1__r.AM_URL_foto__c, AM_Modelo_sugerido_1__r.AM_Linea__c, Color_sugerido__c, AM_Modelo_sugerido_1__r.AM_Version__c,
                        AM_Modelo_sugerido_1__r.AM_Cilindraje__c, AM_Modelo_sugerido_1__r.AM_Transmision__c, AM_Modelo_sugerido_1__r.AM_Precio_de_lista__c,
@@ -62,6 +64,7 @@ public class RM_CotizacionFinanciacion_ctr {
             blnFrenadoAutonomoEmergencia        =   this.objOp.AM_Modelo_de_interes__r.SO_Frenado_autonomo_de_emergencia__c;
             blnSistemaSujecionInfantil          =   this.objOp.AM_Modelo_de_interes__r.SO_Sistema_de_sujecion_infantil__c;
             blnSistemaBolsaAire                 =   this.objOp.AM_Modelo_de_interes__r.SO_Sistema_de_bolsa_de_aire__c ;
+            intBolsasAire                       =   this.objOp.AM_Modelo_de_interes__r.SO_Numero_de_bolsas_de_aire__c != null ? Integer.ValueOf( this.objOp.AM_Modelo_de_interes__r.SO_Numero_de_bolsas_de_aire__c ) : 0; 
         }
         
         String strObservacionesFirstW = this.objOp.AM_ObservacionesL__c != null ? this.objOp.AM_ObservacionesL__c.substringBefore(' ') : '';

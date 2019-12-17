@@ -16,9 +16,15 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS;}
 #p1dimg3 {position:absolute;top:580px;left:5px;z-index:-1;width:200px;height:100px;}
 #rcorners {border: 2px solid #73AD21;border-radius: 25px;}
 
-
-
-
+.square {
+	width: 15px;
+	height: 15px;
+	border: 1px solid black;
+	padding: 1px;
+	margin: 1px;
+	text-align: center;
+	font-size : 12px;
+}
 
 .ft0{font: bold 27px;font-family: sans-serif;color: #ffffff;line-height: 32px;}
 .ft1{font: bold 12px;font-family: sans-serif;color: #414042;line-height: 15px;}

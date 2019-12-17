@@ -264,12 +264,54 @@
                     <th rowspan="6" colspan ="3" width="50%" align="right" ><P class="p14 ft16" align="right">{!$Label.AO_sr_sistemaSeguridad_lbl}</p></th>    
                 </tr>
                 <tr>
-                    <td valign="center" align="center"><apex:image  id="imgCheckSistemaAntibloqueo"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>
-                    <td valign="center" align="center"><apex:image  id="imgCheckControlEstabilidad"        value="{!$Resource.AO_sr_checkX}" width="15" /></td>
-                    <td valign="center" align="center"><apex:image id="imgCheckFrenadoColisionFrontal"    value="{!$Resource.AO_sr_checkX}" width="15" /></td>
-                    <td valign="center" align="center"><apex:image id="imgCheckFrenadoAutonomo"           value="{!$Resource.AO_sr_check}"  width="15" /></td>
-                    <td valign="center" align="center"><apex:image id="imgCheckSujecionInfantil"          value="{!$Resource.AO_sr_check}"  width="15" /></td>
-                    <td valign="center" align="center"><apex:image id="imgCheckBolsaAire"                 value="{!$Resource.AO_sr_check}"  width="15" /></td>
+                    <td valign="center" align="center">                        
+                        <apex:outputPanel rendered="{!if(blnSistemaAntibloqueoFrenos == true , true, false )}"> 
+                                <apex:image  id="imgCheckSistemaAntibloqueoOK"        value="{!$Resource.AO_sr_check}" width="15" /> 
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!if( blnSistemaAntibloqueoFrenos == true, false, true )}"> 
+                                <apex:image  id="imgCheckSistemaAntibloqueoKO"        value="{!$Resource.AO_sr_checkX}" width="15" /> 
+                        </apex:outputPanel>                         
+                    </td>
+                    <td valign="center" align="center">                        
+                        <apex:outputPanel rendered="{!if(blnControlElectronicoEstabilidad == true , true, false )}"> 
+                                <apex:image  id="imgCheckControlEstabilidadOK"        value="{!$Resource.AO_sr_check}" width="15" /> 
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!if( blnControlElectronicoEstabilidad == true, false, true )}"> 
+                                <apex:image  id="imgCheckControlEstabilidadKO"        value="{!$Resource.AO_sr_checkX}" width="15" /> 
+                        </apex:outputPanel>                         
+                    </td>
+                    <td valign="center" align="center">                        
+                        <apex:outputPanel rendered="{!if(blnAlertaColisionFrontal == true , true, false )}"> 
+                                <apex:image  id="imgFrenadoColisionFrontalOK"        value="{!$Resource.AO_sr_check}" width="15" /> 
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!if( blnAlertaColisionFrontal == true, false, true )}"> 
+                                <apex:image  id="imgFrenadoColisionFrontalKO"        value="{!$Resource.AO_sr_checkX}" width="15" /> 
+                        </apex:outputPanel>                         
+                    </td>
+                    <td valign="center" align="center">                        
+                        <apex:outputPanel rendered="{!if(blnFrenadoAutonomoEmergencia == true , true, false )}"> 
+                                <apex:image  id="imgFrenadoAutonomoOK"        value="{!$Resource.AO_sr_check}" width="15" /> 
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!if( blnFrenadoAutonomoEmergencia == true, false, true )}"> 
+                                <apex:image  id="imgFrenadoAutonomoKO"        value="{!$Resource.AO_sr_checkX}" width="15" /> 
+                        </apex:outputPanel>                         
+                    </td>
+                    <td valign="center" align="center">                        
+                        <apex:outputPanel rendered="{!if(blnSistemaSujecionInfantil == true , true, false )}"> 
+                                <apex:image  id="imgSistemaSujecionInfantilOK"        value="{!$Resource.AO_sr_check}" width="15" /> 
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!if( blnSistemaSujecionInfantil == true, false, true )}"> 
+                                <apex:image  id="imgSistemaSujecionInfantilKO"        value="{!$Resource.AO_sr_checkX}" width="15" /> 
+                        </apex:outputPanel>                         
+                    </td>
+                    <td valign="center" align="center">                        
+                        <apex:outputPanel rendered="{!if(blnSistemaBolsaAire == true , true, false )}"> 
+                                <apex:image  id="imgSistemaBolsaAireOK"        value="{!$Resource.AO_sr_check}" width="15" /> 
+                        </apex:outputPanel> 
+                        <apex:outputPanel rendered="{!if( blnSistemaBolsaAire == true, false, true )}"> 
+                                <apex:image  id="imgSistemaBolsaAireKO"        value="{!$Resource.AO_sr_checkX}" width="15" /> 
+                        </apex:outputPanel>                         
+                    </td>
                 </tr>
                 <tr>
                     <td><apex:image id="imgSistemaAntibloqueo"          value="{!$Resource.AO_sr_SistemaAntibloqueo}" width="60" /></td>
