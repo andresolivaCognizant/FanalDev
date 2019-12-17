@@ -320,7 +320,11 @@
                     <td><apex:image id="imgFrenadoAutonomo"             value="{!$Resource.AO_sr_FrenadoAutonomo}" width="60" /></td>
                     <td><apex:image id="imgSujecionInfantil"            value="{!$Resource.AO_sr_sistemaSujecionInfantil}" width="60" /> </td>
                     <td><apex:image id="imgBolsaAire"                   value="{!$Resource.AO_sr_sistemaBolsaAire}" width="60" /> </td> 
-                    <td><apex:image id="imgCheck2BolsaAire"             value="{!$Resource.AO_sr_check}"  width="15" /> </td>                   
+                    <td>                            
+                        <div class="square">                            
+                            {!intBolsasAire}
+                        </div>
+                    </td>                  
                 </tr>               
             </table>
                                
