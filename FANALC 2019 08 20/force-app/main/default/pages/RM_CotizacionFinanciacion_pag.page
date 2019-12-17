@@ -421,20 +421,20 @@
                             <apex:image id="imgClientSignature" value="{!$Resource.RM_FirmaCliente}"/>                            
                         </td>
                     </tr>
-                </table>
+                </table>               
                 <table cellpadding="0" cellspacing="0" class="t1">
                     <tr>
-                        <td width="22%" valign="center" align="center">
-                            <apex:image width="80%" id="imgEcoImage" value="{!$Resource.RM_LogoEcoDreams}"/>
+                        <td width="25%" valign="center" align="center">
+                            <apex:image id="imgEcoImage" value="{!$Resource.AO_LogoEcoDreams}" width="80%" height="80%"/>
                         </td>
-                        <td width="22%" valign="center" align="center">
-                            <apex:image width="80%" id="imgHondaURL" value="{!$Resource.RM_LogoHondaURL}"/>
+                        <td width="25%" valign="center" align="center">
+                            <apex:image id="imgHondaURL" value="{!$Resource.AO_LogoHondaURL}" width="80%" height="80%"/>
                         </td>
-                        <td width="22%" valign="center" align="center">
-                            <apex:image width="80%" id="imgHondaUsed" value="{!$Resource.RM_LogoUsados}"/>
+                        <td width="25%" valign="center" align="center">
+                            <apex:image id="imgHondaUsed" value="{!$Resource.AO_sr_usados}"  width="80%" height="80%"/><!--RM_LogoUsados-->
                         </td>
-                        <td width="22%" valign="center" align="center">
-                            <apex:image width="80%" id="imgHondaRenting" value="{!$Resource.RM_LogoHondaRenting}"/>
+                        <td width="25%" valign="center" align="center">
+                            <apex:image id="imgHondaRenting" value="{!$Resource.AO_LogoHondaRenting}" width="80%" height="80%"/>
                         </td>
                     </tr>
                 </table>
