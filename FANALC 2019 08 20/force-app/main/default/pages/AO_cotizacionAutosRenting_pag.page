@@ -39,7 +39,7 @@
                 </table>                
                 <P class="p3 ft4 p2Left">Estimado (a):</P>
                 <P class="p4 ft5 p2Left">{!objOp.AM_Usuario_motocicleta__r.Name}</P>
-                <P class="p5 ft9 p2Left">{!$Label.RM_AgradecimientoCotizacionLBL}</P>                
+                <P class="p5 ft9p p2Left">{!$Label.RM_AgradecimientoCotizacionLBL}</P>                
                
                 <table cellpadding="0" cellspacing="0" class="t1" >                    
                      <tr>

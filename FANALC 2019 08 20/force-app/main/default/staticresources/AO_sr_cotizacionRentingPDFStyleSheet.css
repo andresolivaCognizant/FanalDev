@@ -53,6 +53,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 .ft8{font: bold 10px;font-family: sans-serif;color: #414042;line-height: 2px; }
 .ft88{font: bold 12px;font-family: sans-serif;color: #414042}
 .ft9{font: 10px;color: #414042;line-height: 4px;}
+.ft9p{font: 10px;color: #414042;line-height: 11px;}
 .ft99{font: 7px;color: #414042;line-height: 14px;}
 .ft10{font: bold 11px;font-family: sans-serif;color: #be1e2d;line-height: 14px;}
 .ft11{font: bold 12px;font-family: sans-serif;color: #231f20;line-height: 15px;}
@@ -79,7 +80,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 
 .p0{text-align: left;margin-top: 0px;margin-bottom: 0px;}
 .p0Left{text-align: left;margin-left: -5px; margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
-.p1Left{text-align: left;margin-left: -22px; margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p1Left{text-align: left;margin-left: -20px; margin-top: -10px;margin-bottom: 0px;white-space: nowrap;}
 .p2Left{text-align: left;margin-left: -25px; margin-top: 0px;margin-bottom: 0px;}
 
 .pleft {
@@ -97,11 +98,11 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS; margin-righ
 
 .p1{text-align: left;padding-left: 49px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p2{text-align: left;padding-left: 24px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
-.pObservaciones{  margin-top: -20px;   width: 360px} 
-.pOServicios{  margin-top: -25px; margin-left: 1px;  width: 340px;} 
+.pObservaciones{  margin-top: -12px;   width: 360px} 
+.pOServicios{  margin-top: -33px; margin-left: 1px;  width: 340px;} 
 .p3{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;margin-top: 8px;margin-bottom: 0px;}
 .p4{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;margin-top: 3px;margin-bottom: 0px;}
-.p5{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;padding-bottom:4px;padding-right: 20px;margin-top: 0px;margin-bottom: 2px;}
+.p5{text-align: left;margin-left: 40px; margin-right: 10px; padding-left: 0px;padding-bottom:7px;padding-right: 50px;margin-top: 0px;margin-bottom: 2px;}
 .p6{text-align: left;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p7{text-align: left;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p8{text-align: left;padding-left: 67px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
