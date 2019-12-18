@@ -7,7 +7,7 @@
                     <apex:image id="imgLogoMR" value="{!$Resource.RM_Logo2019}"/>  
                 </div>              
                 <div id="p1dimg1">
-                    <apex:image id="imgTextCot" value="{!$Resource.RM_Cotizacion}"/>                            
+                    <apex:image id="imgTextCot" width="200" value="{!$Resource.AO_CotizacionGris}"/>                            
                 </div>       
                 <table cellpadding="0" cellspacing="0" class="t0">
                     <tr>
