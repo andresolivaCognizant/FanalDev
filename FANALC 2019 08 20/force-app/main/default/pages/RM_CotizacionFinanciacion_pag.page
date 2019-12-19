@@ -104,7 +104,7 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                         <td class="tr4 td5">
-                            <p class="p0Left ft9"><SPAN class="ft8">Agencia: </SPAN>{!objOp.AM_Agencia_propietario__c} - {!objOp.AM_Direccion_propietario__c}</p>
+                            <p class="p0Left ft9" style="margin-right: 50px;" ><SPAN class="ft8"  >Agencia: </SPAN>{!objOp.AM_Agencia_propietario__c} - {!objOp.AM_Direccion_propietario__c}</p>
                         </td>                        
                     </tr>
                     <tr>
@@ -255,7 +255,7 @@
                        <tr>
                            <td>
                                 <div class="backgroundLogoGatan">
-                                    <apex:image id="imgLogoGaran"  value="{!$Resource.AO_LogoGarantiaNuevos}" width="145" height="60"/>
+                                    <apex:image id="imgLogoGaran"  value="{!$Resource.AO_GarantiaTotal}" width="145" />
                                 </div>
                            </td> 
                            <td class="td61">
@@ -385,7 +385,7 @@
                             &nbsp;
                         </td>
                         <td width="7%">                            
-                            <apex:image   id="imgYesNoCheckBox" value="{!$Resource.RM_SiNoCheckBox}"/>
+                            <apex:image   id="imgYesNoCheckBox" value="{!$Resource.AO_SiNoCheckBox}" width="75px"/>
                             <p class="p14 ft166">&nbsp;</p>
                             <p class="p14 ft166">&nbsp;</p>
                             <apex:image id="imgClientSignature" value="{!$Resource.RM_FirmaCliente}"/>                            

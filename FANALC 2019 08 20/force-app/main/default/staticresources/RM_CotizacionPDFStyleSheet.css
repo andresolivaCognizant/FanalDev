@@ -17,16 +17,17 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS;}
 #rcorners {border: 2px solid #73AD21;border-radius: 25px;}
 .anchoFijo  { font: bold 12px;font-family: sans-serif; line-height: 0px; width:400px ; padding-right: 1px;  background-color: #dddddd; height:4px;}
 .square {
-	width: 15px;
-	height: 15px;
+	width: 13px;
+	height: 13px;
 	border: 1px solid black;
 	padding: 1px;
 	margin: 1px;
 	text-align: center;
-	font-size : 12px;
+	font-size : 10px;
+	margin-left:-10px;
 }
 .pObservaciones{  margin-top: -20px;   width: 360px} 
-.p0Left{text-align: left;margin-left: 142px; margin-right: 150px;padding-right: 150px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p0Left{text-align: left;margin-left: 142px; padding-right: 50px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .tableRenting {  margin-left: -10px;font-family: arial, sans-serif; border-collapse: collapse;   width: 95%;}
 .ft0{font: bold 27px;font-family: sans-serif;color: #ffffff;line-height: 32px;}
 .ft1{font: bold 12px;font-family: sans-serif;color: #414042;line-height: 15px;}
