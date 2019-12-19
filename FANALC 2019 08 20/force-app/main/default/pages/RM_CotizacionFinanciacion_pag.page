@@ -388,7 +388,7 @@
                             <apex:image   id="imgYesNoCheckBox" value="{!$Resource.AO_SiNoCheckBox}" width="75px"/>
                             <p class="p14 ft166">&nbsp;</p>
                             <p class="p14 ft166">&nbsp;</p>
-                            <apex:image id="imgClientSignature" value="{!$Resource.RM_FirmaCliente}"/>                            
+                            <apex:image id="imgClientSignature" value="{!$Resource.AO_FirmaCliente}" width="150px"/>                            
                         </td>
                     </tr>
                 </table>               
