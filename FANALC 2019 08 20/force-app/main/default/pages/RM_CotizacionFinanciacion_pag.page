@@ -104,9 +104,9 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                         <td class="tr4 td5">
-                            <p class="p0Left ft9" style="margin-right: 50px;" ><SPAN class="ft8"  >Agencia: </SPAN>{!objOp.AM_Agencia_propietario__c} - {!objOp.AM_Direccion_propietario__c}</p>
+                            <p class="p0Left ft9" ><SPAN class="ft8"  >Agencia: </SPAN>{!objOp.AM_Agencia_propietario__c} - </p>
                         </td>                        
-                    </tr>
+                    </tr>                                     
                     <tr>
                        <td class="tr4 td3">
                             <p class="p0 ft9"><SPAN class="ft8">Dirección: </SPAN>{!objOp.AM_Usuario_motocicleta__r.AM_Direccion__c}</p>
@@ -115,7 +115,7 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                         <td class="tr4 td5">
-                            <p class="p0 ft9"><SPAN class="ft8"> </SPAN></p>
+                            <p class="p0Left ft9"><SPAN class="ft8"> </SPAN> {!objOp.AM_Direccion_propietario__c}</p>
                         </td>
                         <td class="tr4 td6">
                             <p class="p0 ft2">&nbsp;</p>
