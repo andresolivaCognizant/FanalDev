@@ -26,7 +26,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS;}
 	font-size : 12px;
 }
 .pObservaciones{  margin-top: -20px;   width: 360px} 
-.p0Left{text-align: left;margin-left: -5px; margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p0Left{text-align: left;margin-left: 142px; margin-right: 150px;padding-right: 150px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .tableRenting {  margin-left: -10px;font-family: arial, sans-serif; border-collapse: collapse;   width: 95%;}
 .ft0{font: bold 27px;font-family: sans-serif;color: #ffffff;line-height: 32px;}
 .ft1{font: bold 12px;font-family: sans-serif;color: #414042;line-height: 15px;}
@@ -62,7 +62,7 @@ body {margin-top: 0px;margin-left: 0px;font-family:Arial Unicode MS;}
 .ft27{font: 7px;color: #1d1d1b;line-height: 10px;}
 
 .p1Left{text-align: left;margin-left: -5px; margin-top: 0px;margin-bottom: 0px; white-space: nowrap;}
-.p2Left{text-align: left;margin-left: -10px; margin-top: -34px;margin-bottom: 0px; white-space: nowrap;}
+.p2Left{text-align: left;margin-left: -15px; margin-top: -34px;margin-bottom: 0px; white-space: nowrap;}
 .p0{text-align: left;margin-top: 0px;margin-bottom: 0px;white-space: nowrap; }
 .p1{text-align: left;padding-left: 49px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p2{text-align: left;padding-left: 24px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}

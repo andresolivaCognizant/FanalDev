@@ -41,16 +41,18 @@
                 
                 <P class="p3 ft4">Estimado (a):</P>
                 <P class="p4 ft5">{!objOp.AM_Usuario_motocicleta__r.Name}</P>
-                <P class="p5 ft6">{!$Label.RM_AgradecimientoCotizacionLBL}</P>                
+                <P class="p5 ft6">{!$Label.RM_AgradecimientoCotizacionLBL}</P>  
                 <table cellpadding="0" cellspacing="0" class="t1">
-                    <tr>
-                        <td colspan="2" class="tr2 td3 anchoFijo">
-                            <p class="p6 ft7">Datos del cliente &nbsp;</p>
-                        </td>                       
-                        <td colspan="2" class="tr2 td3 anchoFijo">
-                            <p class="p6 ft7">Información asesor </p>
-                        </td>                       
+                    <tr>  
+                        <td colspan="2"  class="tr2 td3 anchoFijo">
+                            <p class="p6 ft7" >Datos del cliente</p>
+                        </td>
+                        <td colspan="2"  class="tr2 td3 anchoFijo">
+                            <p class="p6 ft7">  Información asesor </p>                    
+                        </td>                
                     </tr>
+                </table>              
+                <table cellpadding="0" cellspacing="0" class="t1">                    
                     <tr>
                         <td class="tr3 td3">
                             <p class="p0 ft9"><SPAN class="ft8">C.C.: </SPAN>{!objOp.AM_Usuario_motocicleta__r.AM_Numero_de_documento__c}</p>
@@ -59,7 +61,7 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                         <td class="tr3 td5">
-                            <p class="p0 ft9"><SPAN class="ft8">Nombre: </SPAN>{!objOp.Owner.Name}</p>
+                            <p class="p0Left ft9"><SPAN class="ft8">Nombre: </SPAN>{!objOp.Owner.Name}</p>
                         </td>
                         <td class="tr3 td6">
                             <p class="p0 ft2">&nbsp;</p>
@@ -74,7 +76,7 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                         <td class="tr4 td5">
-                            <p class="p0 ft8">Teléfono fijo / Celular: <SPAN class="ft9">{!objOp.AM_Movil_propietario__c}</SPAN></p>
+                            <p class="p0Left ft8">Teléfono fijo / Celular: <SPAN class="ft9">{!objOp.AM_Movil_propietario__c}</SPAN></p>
                         </td>
                         <td class="tr4 td6">
                             <p class="p0 ft2">&nbsp;</p>
@@ -88,21 +90,7 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                         <td class="tr4 td5">
-                            <p class="p0 ft8">Correo: <SPAN class="ft9">{!objOp.Owner.Email}</SPAN></p>
-                        </td>
-                        <td class="tr4 td6">
-                            <p class="p0 ft2">&nbsp;</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="tr4 td3">
-                            <p class="p0 ft9"><SPAN class="ft8">Dirección: </SPAN>{!objOp.AM_Usuario_motocicleta__r.AM_Direccion__c}</p>
-                        </td>
-                        <td class="tr4 td4">
-                            <p class="p0 ft2">&nbsp;</p>
-                        </td>
-                        <td class="tr4 td5">
-                            <p class="p0 ft9"><SPAN class="ft8">Agencia: </SPAN>{!objOp.AM_Agencia_propietario__c} - {!objOp.AM_Direccion_propietario__c}</p>
+                            <p class="p0Left ft8">Correo: <SPAN class="ft9">{!objOp.Owner.Email}</SPAN></p>
                         </td>
                         <td class="tr4 td6">
                             <p class="p0 ft2">&nbsp;</p>
@@ -111,6 +99,17 @@
                     <tr>
                         <td class="tr4 td3">
                             <p class="p0 ft9"><NOBR><SPAN class="ft8">E-mail:</SPAN></NOBR><SPAN class="ft8"> </SPAN>{!objOp.AM_Usuario_motocicleta__r.PersonEmail}</p>
+                        </td>                        
+                        <td class="tr4 td4">
+                            <p class="p0 ft2">&nbsp;</p>
+                        </td>
+                        <td class="tr4 td5">
+                            <p class="p0Left ft9"><SPAN class="ft8">Agencia: </SPAN>{!objOp.AM_Agencia_propietario__c} - {!objOp.AM_Direccion_propietario__c}</p>
+                        </td>                        
+                    </tr>
+                    <tr>
+                       <td class="tr4 td3">
+                            <p class="p0 ft9"><SPAN class="ft8">Dirección: </SPAN>{!objOp.AM_Usuario_motocicleta__r.AM_Direccion__c}</p>
                         </td>
                         <td class="tr4 td4">
                             <p class="p0 ft2">&nbsp;</p>
@@ -130,6 +129,8 @@
                             <p class="p0 ft2">&nbsp;</p>
                         </td>
                     </tr> 
+                </table>
+                <table cellpadding="0" cellspacing="0" class="t1">  
                     <tr>
                         <td colspan="2" class="tr2 td3 anchoFijo">
                             <p class="p6 ft7">Vehículo a cotizar / opción 1</p>
